@@ -1,0 +1,8 @@
+# Delhi-Temperature-Prediction
+Predict the temperature of our nations capital based on various physical and environmental features using various machine learning algorithms
+Project Description: Delhi Temperature Prediction.
+Delhi Temperature Prediction: Using 4 features (Rain, Humidity, Pressure, Condition)
+Target Feature: Temperature.
+Conditions: Smoke, Fog, Cloud, Clear.
+The dataset on which model is trained was downloaded from Kaggle.com. The dataset has 8 fields. To get better insights of dataset, Plot the graphs between different fields and temperature separately and find out that on changing above four features, there is a significant change in temperature. To get more intuition on the feature selection, feature selection method (SelectKBest) of scikit-learn library was used and get the score of feature selection from it and find out that these four features are most important and other four features are not related to temperature that much. After selecting the features, next work is to look for the outliers, for the outliers checking the mean of every feature except condition field because it was previously taken care of. Those values which deviates a lot from the mean value were removed from the data frame. Other Approach to handle outliers is to take logarithm of all the values as it would minimize the difference between the values differences. But I removed the rows and luckily every column have the same rows as outliers so my work wasn’t tough though.
+To getting the model trained for temperature prediction, various approaches were used like Linear Regression, KNN and Decision Tree and got maximum accuracy of 88% using KNN.
